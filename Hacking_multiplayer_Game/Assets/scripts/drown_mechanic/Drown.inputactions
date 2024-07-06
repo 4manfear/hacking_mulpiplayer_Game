@@ -1,0 +1,54 @@
+{
+    "name": "Drown",
+    "maps": [
+        {
+            "name": "Drown",
+            "id": "2944a89c-af68-4b43-b1f9-0194ddd2781f",
+            "actions": [
+                {
+                    "name": "movement",
+                    "type": "PassThrough",
+                    "id": "5aeea0d2-e7fd-4a0a-9326-785346326032",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "looking",
+                    "type": "PassThrough",
+                    "id": "af903e65-59bf-4887-850d-0a63203aee8f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ecb46423-01e8-429c-bbb2-a61b8fda84fc",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bcdd0145-16ba-4acf-9477-6a7545953e74",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "looking",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
