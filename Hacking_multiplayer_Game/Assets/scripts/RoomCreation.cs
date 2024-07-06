@@ -12,14 +12,14 @@ public class RoomCreation : MonoBehaviourPunCallbacks
 
     public void CreateRoom()
     {
-        
+        //creating a personal server threw text and joining them.
             PhotonNetwork.CreateRoom(creatRoom.text);
         
     }    
 
     public void JoinRoom()
     {
-        
+        // joining the already created server threw text
             PhotonNetwork.JoinRoom(joinRoom.text);
         
     }
