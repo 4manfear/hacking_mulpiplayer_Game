@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using Photon.Realtime;
 
 public class RoomCreation : MonoBehaviourPunCallbacks
 {
@@ -10,8 +11,16 @@ public class RoomCreation : MonoBehaviourPunCallbacks
     public InputField joinRoom;
     
 
+
+
     public void CreateRoom()
     {
+        // setting limits 
+        RoomOptions roomOptions = new RoomOptions()
+        {
+            MaxPlayers = 2
+        };
+
         //creating a personal server threw text and joining them.
             PhotonNetwork.CreateRoom(creatRoom.text);
         
