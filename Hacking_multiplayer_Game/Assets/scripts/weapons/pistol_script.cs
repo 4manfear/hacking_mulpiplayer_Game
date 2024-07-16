@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Animations.Rigging;
-using Photon.Pun;
+
 
 public class pistol_script : MonoBehaviour
 {
@@ -42,8 +42,8 @@ public class pistol_script : MonoBehaviour
     RaycastHit hit;
     private void Update()
     {
-        if(pm.view.IsMine)
-        {
+        
+        
             if (PR.rrrr == true)
             {
                 anim.SetLayerWeight(0, Mathf.Lerp(anim.GetLayerWeight(0), 0f, Time.deltaTime * 10f));
@@ -77,7 +77,7 @@ public class pistol_script : MonoBehaviour
                 Right_hand_bon_container.weight = 0;
             }
 
-        }
+        
 
 
         //if (shoted == true)

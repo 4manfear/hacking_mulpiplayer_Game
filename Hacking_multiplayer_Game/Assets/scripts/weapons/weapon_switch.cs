@@ -24,8 +24,8 @@ public class weapon_switch : MonoBehaviour
     }
     private void Update()
     {
-        if (pm.view.IsMine)
-        {
+        
+        
             creatingloop();
             if (weaponswitcher >= 3f)
             {
@@ -74,7 +74,7 @@ public class weapon_switch : MonoBehaviour
                 pistol.SetActive(false);
                 pistolsc.enabled = false;
             }
-        }
+        
        
 
         

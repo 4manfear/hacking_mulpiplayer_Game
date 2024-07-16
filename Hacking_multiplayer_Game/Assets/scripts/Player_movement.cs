@@ -5,16 +5,16 @@ using Unity.Burst.Intrinsics;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 using UnityEngine.InputSystem;
-using Photon.Pun;
 
-public class Player_movement : MonoBehaviourPunCallbacks
+
+public class Player_movement : MonoBehaviour
 {
     public TwoBoneIKConstraint left_hand_bon_container;
     public TwoBoneIKConstraint Right_hand_bon_container;
     public MultiAimConstraint Aim;
     public TwoBoneIKConstraint right_hand_miile;
 
-    public PhotonView view;
+    
     public Camera mycam;
 
 
@@ -56,10 +56,7 @@ public class Player_movement : MonoBehaviourPunCallbacks
     private void Start()
     {
 
-        if(!view.IsMine)
-        {
-           mycam.enabled = false;
-        }
+        
 
         Aim.weight = 0;
         anim = GetComponent<Animator>();
@@ -92,11 +89,10 @@ public class Player_movement : MonoBehaviourPunCallbacks
 
     private void FixedUpdate()
     {
-        if(view.IsMine)
-        {
+        
             MovePlayer();
             RotatePlayer();
-        }
+        
         
 
     }
@@ -188,8 +184,8 @@ public class Player_movement : MonoBehaviourPunCallbacks
     }
     private void Update()
     {
-        if(view.IsMine)
-        {
+        
+        
             // Rotate the additionalObject along with the player and camera
             additionalGameobject.transform.rotation = playerCamera.rotation;
 
@@ -212,7 +208,7 @@ public class Player_movement : MonoBehaviourPunCallbacks
             {
                 speed = walkspeed;
             }
-        }
+        
     }
 
        
