@@ -647,6 +647,8 @@ GameObject:
   - component: {fileID: 907302127138596381}
   - component: {fileID: 907302127138596380}
   - component: {fileID: 907302127138596379}
+  - component: {fileID: 907302127138596382}
+  - component: {fileID: 907302127138596383}
   m_Layer: 0
   m_Name: Y Bot
   m_TagString: Untagged
@@ -778,6 +780,47 @@ MonoBehaviour:
   - {fileID: 8339608117436556246}
   - {fileID: 1988406253336783441}
   - {fileID: 222648121225852931}
+--- !u!114 &907302127138596382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907302127138596378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde60eda3f10d4f479fe40cc5442a41e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  runSpeed: 7
+  cc: {fileID: 907302127138596383}
+--- !u!143 &907302127138596383
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907302127138596378}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.3
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &1010807930901677821
 Transform:
   m_ObjectHideFlags: 0
