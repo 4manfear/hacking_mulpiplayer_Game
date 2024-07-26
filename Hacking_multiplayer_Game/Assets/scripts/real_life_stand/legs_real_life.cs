@@ -16,6 +16,7 @@ public class legs_real_life : MonoBehaviour
     [SerializeField] private TwoBoneIKConstraint right_foot, left_foot;
 
     public bool onground1, onground2;
+    public LayerMask LM;
 
     float distance;
 
@@ -86,10 +87,10 @@ public class legs_real_life : MonoBehaviour
     }
     void CheckAndAdjustIKTarget(TwoBoneIKConstraint ikConstraint, Transform foot)
     {
-        if (!onground1 && distance<0.8f)
+        if (!onground1)
         {
             RaycastHit hit;
-            if (Physics.Raycast(foot.position, Vector3.down, out hit, 1f))
+            if (Physics.Raycast(foot.position, Vector3.down, out hit, 1f,LM))
             {
                 Transform ikTarget = ikConstraint.data.target;
                 if (ikTarget != null)

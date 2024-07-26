@@ -19,13 +19,15 @@ public class sphere_detection2 : MonoBehaviour
         if (other.gameObject.layer == lm)
         {
             parent.onground2 = true;
-            //Debug.Log("ground check");
+            Debug.Log("ground check");
         }
 
     }
+
+
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer(layerName))
+        if (other.gameObject.layer == lm)
         {
             parent.onground2 = false;
         }
