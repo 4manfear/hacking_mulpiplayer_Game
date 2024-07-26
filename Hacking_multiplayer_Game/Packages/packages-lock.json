@@ -61,6 +61,17 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.feature.characters-animation": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.animation.rigging": "1.2.1",
+        "com.unity.timeline": "1.7.6",
+        "com.unity.cinemachine": "2.10.0",
+        "com.unity.formats.fbx": "4.2.1"
+      }
+    },
     "com.unity.feature.cinematic": {
       "version": "1.0.0",
       "depth": 0,
