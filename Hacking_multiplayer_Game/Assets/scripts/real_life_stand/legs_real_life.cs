@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
+using UnityEngine.UIElements;
 
 public class legs_real_life : MonoBehaviour
 {
@@ -19,10 +20,14 @@ public class legs_real_life : MonoBehaviour
     public LayerMask LM;
 
     float distance;
-
+    private void Awake()
+    {
+        onground1 = false;
+        onground2 = false;
+    }
     private void Start()
     {
-        createsphere();
+        //createsphere();
     }
 
     private void Update()
@@ -32,50 +37,52 @@ public class legs_real_life : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (Right_foot != null)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(Right_foot.position, 0.1f);
-        }
+        //if (Right_foot != null)
+        //{
+        //    Gizmos.color = Color.green;
+        //    Gizmos.DrawWireSphere(Right_foot.position, 0.1f);
+        //}
 
-        if (Left_foot != null)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(Left_foot.position, 0.1f);
-        }
+        //if (Left_foot != null)
+        //{
+        //    Gizmos.color = Color.green;
+        //    Gizmos.DrawWireSphere(Left_foot.position, 0.1f);
+        //}
+
+        
     }
-    void createsphere()
-    {
+    //void createsphere()
+    //{
 
-        sphere1 = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        sphere2 = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+    //    sphere1 = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+    //    sphere2 = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 
-        sc1 = sphere1.GetComponent<SphereCollider>();
-        sc1.radius = 0.1f;
-        sc1.isTrigger = true;
+    //    sc1 = sphere1.GetComponent<SphereCollider>();
+    //    sc1.radius = 0.1f;
+    //    sc1.isTrigger = true;
 
-        sc2 = sphere2.GetComponent<SphereCollider>();
-        sc2.radius = 0.1f;
-        sc2.isTrigger = true;
-
-
-
-        mr1 = sphere1.GetComponent<MeshRenderer>();
-        mr1.enabled = false;
-
-        mr2 = sphere2.GetComponent<MeshRenderer>();
-        mr2.enabled = false;
-
-        sphere1.AddComponent<sphere_detection>().parent = this;
-        sphere2.AddComponent<sphere_detection2>().parent = this;
+    //    sc2 = sphere2.GetComponent<SphereCollider>();
+    //    sc2.radius = 0.1f;
+    //    sc2.isTrigger = true;
 
 
-    }
+
+    //    mr1 = sphere1.GetComponent<MeshRenderer>();
+    //    mr1.enabled = false;
+
+    //    mr2 = sphere2.GetComponent<MeshRenderer>();
+    //    mr2.enabled = false;
+
+    //    sphere1.AddComponent<sphere_detection>().parent = this;
+    //    sphere2.AddComponent<sphere_detection2>().parent = this;
+
+
+    //}
     private void FixedUpdate()
     {
 
-        sphere1.transform.position = Right_foot.position;
-        sphere2.transform.position = Left_foot.position;
+        //sphere1.transform.position = Right_foot.position;
+        //sphere2.transform.position = Left_foot.position;
 
         Debug.Log(distance);
         FindDistanceBetweenLegd();
@@ -92,17 +99,18 @@ public class legs_real_life : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(foot.position, Vector3.down, out hit, 1f,LM))
             {
-                Transform ikTarget = ikConstraint.data.target;
-                if (ikTarget != null)
+                if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                 {
-                    ikTarget.position = hit.point;
-                    Debug.Log("IK Target adjusted to ground at position: " + hit.point);
+                    onground1 = true;
                 }
-                else
+                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                 {
-                    Debug.LogWarning("IK Target is not assigned in the constraint.");
+                    onground1 = false;
                 }
+                
             }
+            
         }
+        Debug.DrawRay(foot.position, Vector3.down * 1f, Color.red);
     }
 }

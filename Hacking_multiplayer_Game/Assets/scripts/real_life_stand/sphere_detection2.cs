@@ -13,23 +13,23 @@ public class sphere_detection2 : MonoBehaviour
         lm = LayerMask.NameToLayer(layerName);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        //Debug.Log("ground check");
-        if (other.gameObject.layer == lm)
-        {
-            parent.onground2 = true;
-            Debug.Log("ground check");
-        }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    //Debug.Log("ground check");
+    //    if (other.gameObject.layer == lm)
+    //    {
+    //        parent.onground2 = true;
+    //        Debug.Log("ground check");
+    //    }
 
-    }
+    //}
 
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.layer == lm)
-        {
-            parent.onground2 = false;
-        }
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.layer == lm)
+    //    {
+    //        parent.onground2 = false;
+    //    }
+    //}
 }
