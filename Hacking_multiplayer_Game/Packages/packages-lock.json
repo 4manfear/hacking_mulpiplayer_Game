@@ -29,7 +29,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.8.15",
+      "version": "1.8.17",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -48,7 +48,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.3.1",
+      "version": "2.4.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -68,7 +68,7 @@
       "dependencies": {
         "com.unity.animation.rigging": "1.2.1",
         "com.unity.timeline": "1.7.6",
-        "com.unity.cinemachine": "2.10.0",
+        "com.unity.cinemachine": "2.10.1",
         "com.unity.formats.fbx": "4.2.1"
       }
     },
@@ -81,8 +81,8 @@
         "com.unity.sequences": "2.0.1",
         "com.unity.formats.fbx": "4.2.1",
         "com.unity.formats.alembic": "2.3.2",
-        "com.unity.cinemachine": "2.10.0",
-        "com.unity.recorder": "4.0.2"
+        "com.unity.cinemachine": "2.10.1",
+        "com.unity.recorder": "4.0.3"
       }
     },
     "com.unity.feature.worldbuilding": {
@@ -91,9 +91,9 @@
       "source": "builtin",
       "dependencies": {
         "com.unity.probuilder": "5.2.2",
-        "com.unity.polybrush": "1.1.6",
+        "com.unity.polybrush": "1.1.8",
         "com.unity.formats.fbx": "4.2.1",
-        "com.unity.terrain-tools": "5.0.1"
+        "com.unity.terrain-tools": "5.0.5"
       }
     },
     "com.unity.formats.alembic": {
@@ -102,8 +102,8 @@
       "source": "registry",
       "dependencies": {
         "com.unity.timeline": "1.0.0",
-        "com.unity.modules.unityanalytics": "1.0.0",
-        "com.unity.modules.cloth": "1.0.0"
+        "com.unity.modules.cloth": "1.0.0",
+        "com.unity.modules.unityanalytics": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -112,13 +112,13 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.timeline": "1.7.1",
-        "com.autodesk.fbx": "4.2.1"
+        "com.autodesk.fbx": "4.2.1",
+        "com.unity.timeline": "1.7.1"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
-      "version": "3.0.28",
+      "version": "3.0.31",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -164,8 +164,8 @@
       "source": "registry",
       "dependencies": {
         "com.unity.barracuda": "2.0.0",
-        "com.unity.modules.imageconversion": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0"
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -177,7 +177,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.polybrush": {
-      "version": "1.1.6",
+      "version": "1.1.8",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -190,14 +190,14 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.settings-manager": "1.0.3",
+        "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.physics": "1.0.0",
-        "com.unity.modules.imgui": "1.0.0"
+        "com.unity.settings-manager": "1.0.3"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.recorder": {
-      "version": "4.0.2",
+      "version": "4.0.3",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -248,10 +248,10 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.timeline": "1.6.3",
+        "com.unity.ugui": "1.0.0",
         "com.unity.recorder": "2.5.5",
-        "com.unity.settings-manager": "1.0.3",
-        "com.unity.ugui": "1.0.0"
+        "com.unity.timeline": "1.6.3",
+        "com.unity.settings-manager": "1.0.3"
       },
       "url": "https://packages.unity.com"
     },
@@ -272,7 +272,7 @@
       }
     },
     "com.unity.terrain-tools": {
-      "version": "5.0.1",
+      "version": "5.0.5",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -306,9 +306,9 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.director": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
-        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
       },
       "url": "https://packages.unity.com"
